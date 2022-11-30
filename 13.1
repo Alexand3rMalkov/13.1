@@ -12,18 +12,24 @@ int main() {
 	system("chcp 1251");
 	setlocale(LC_ALL, "rus");
 	printf("Enter name: ");
-	scanf("%s", Name);
+	scanf("%s", &Name);
 
 	int i = 0;
-	for (; i < 40; i++) {
+	for (; i < 30; i++) {
 		Name[i] = toupper(Name[i]);
 	}
 
 	strcat(H, Name);
 
-	printf("\n%s!", H);
-	for (; i = strlen(H); i < H - 2) {
+	//printf("\n%s!", H);
+	for (int i = strlen(H); i < 38; i++) {
 		H[i] = '!';
-		
 	}
-	H[40] = '\n';
+
+	H[39] = '\0';
+
+	for (int i = 0; i < strlen(H); i++) {
+		printf("%c", H[i]);
+	}
+	
+}
